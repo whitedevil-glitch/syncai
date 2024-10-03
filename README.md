@@ -1,56 +1,105 @@
-# SyncAI
-This project is a tool that was developed as part of mini-project for my college .
-It is based on the Whisper automatic speech recogniton system and is embedded into a Streamlit Web App. 
+# SyncAI 🎙️ → 📝
 
-## Features
+SyncAI is an intelligent speech-to-text transcription tool built on OpenAI's Whisper automatic speech recognition system. Featuring a user-friendly Streamlit interface, it provides accurate transcriptions with advanced features like pause detection and confidence scoring.
 
-- Streamlit UI: The tool includes a user-friendly interface that allows you to upload multiple audio files and get a nicely formated transcript.
-- Pause detection: The tool can detect pauses in the audio.
-- Confidence scores: The tool can color the words according to its probability and display the average score.
-- Translation to english 
-- Speaker detection: not available
+## ✨ Features
 
-## Data Privacy
+- **Modern Streamlit UI** - Clean, intuitive interface for batch audio file processing
+- **Advanced Analysis**
+  - Automatic pause detection
+  - Word-level confidence scoring with color coding
+  - Average confidence score calculation
+- **Translation Support** - Direct translation to English
+- **Privacy-First Design** 
+  - Fully offline processing
+  - No cloud uploads
+  - Suitable for sensitive/clinical data
 
-- Whisper is used locally as well as offline (no internet connection needed)
-- Nothing is being uploaded to the cloud
-- Therefore safe clinical use 
+## 🖥️ Screenshots
 
-## User Interface
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Start Screen</b></td>
+      <td align="center"><b>Results View</b></td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/whitedevil-glitch/syncai/main/imgs/start.png" alt="Start Screen"/></td>
+      <td><img src="https://raw.githubusercontent.com/whitedevil-glitch/syncai/main/imgs/result.png" alt="Results Screen"/></td>
+    </tr>
+  </table>
+</div>
 
-Start Screen            |  Results
-:-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/whitedevil-glitch/syncai/main/imgs/start.png)  |  ![](https://raw.githubusercontent.com/whitedevil-glitch/syncai/main/imgs/result.png)
+## 🚀 Getting Started
 
-## Getting Started
+### Prerequisites
 
-To use this tool, you will need to install the required dependencies and run the Streamlit app. You can do this by following these steps:
+- Python 3.7+
+- pip
+- Git
+- PyTorch (`pip install torch torchvision torchaudio`)
 
-1. Clone the repository: git clone https://github.com/whitedevil-glitch/syncai
-2. Install prerequisites: Python, Pip, Git, PyTorch (pip install torch torchvision torchaudio)
-3. Install dependencies: pip install -r requirements.txt
-4. Run the Streamlit app: streamlit run Transcribe.py (you can also launch it from a desktop shortcut following these instructions: https://discuss.streamlit.io/t/launching-streamlit-webapp-from-desktop-shortcut/26297)
+### Installation
 
-## How to Use
+1. Clone the repository
+```bash
+git clone https://github.com/whitedevil-glitch/syncai
+cd syncai
+```
 
-1. Upload one or multiple audio files 
-2. Select a model (large for the best result) and set additional parameters 
-3. Download the resulting transcript (also saved to local transcripts-folder)
+2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
-## Fixes to common errors
+3. Launch the application
+```bash
+streamlit run Transcribe.py
+```
 
-* Error: Request failed with status code 403 -> run the app with "--server.enableWebsocketCompression=false"
+> 💡 **Tip**: Create a desktop shortcut for easy access by following [these instructions](https://discuss.streamlit.io/t/launching-streamlit-webapp-from-desktop-shortcut/26297)
 
-## Contact
+## 📝 Usage Guide
 
-If you have any questions or feedback about this project, please feel free to contact us by email at saishankar2803@gmail.com
+1. Launch the application
+2. Upload one or multiple audio files using the file picker
+3. Select your preferred model:
+   - Use "large" for highest accuracy
+   - Use "small" or "medium" for faster processing
+4. Configure additional parameters as needed
+5. Process your files and download the transcripts
+   - Transcripts are also automatically saved to the local `transcripts` folder
 
-## Sources
+## ⚠️ Troubleshooting
 
-This project includes code from multiple different sources, each licensed under the MIT License:
+| Error | Solution |
+|-------|----------|
+| Request failed with status code 403 | Run the app with the flag: `--server.enableWebsocketCompression=false` |
 
-* [Source A] (https://github.com/openai/whisper)
-* [Source A] (https://github.com/pyannote/pyannote-audio)
-* [Source C] (https://github.com/hayabhay/whisper-ui)
+## 🤝 Contributing
 
-See the LICENSE file for the full text of the licenses.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📬 Contact
+
+For questions, feedback, or support:
+- Email: saishankar2803@gmail.com
+- GitHub Issues: [Create an issue](https://github.com/whitedevil-glitch/syncai/issues)
+
+## 📚 Credits
+
+SyncAI builds upon these excellent open-source projects:
+
+- [OpenAI Whisper](https://github.com/openai/whisper) - Speech recognition system
+- [Pyannote Audio](https://github.com/pyannote/pyannote-audio) - Audio analysis
+- [Whisper UI](https://github.com/hayabhay/whisper-ui) - UI components
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <i>Built with ❤️ as a college mini-project</i>
+</div>
