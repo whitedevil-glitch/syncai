@@ -93,6 +93,7 @@ SyncAI builds upon these excellent open-source projects:
 - [OpenAI Whisper](https://github.com/openai/whisper) - Speech recognition system
 - [Pyannote Audio](https://github.com/pyannote/pyannote-audio) - Audio analysis
 - [Whisper UI](https://github.com/hayabhay/whisper-ui) - UI components
+- [Whisper Streamlit](https://github.com/jojojaeger/whisper-streamlit) - Idea Inspiration
 
 ## 📄 License
 
